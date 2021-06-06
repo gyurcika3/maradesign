@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mara Design</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+
+
+
+		$(document).ready(function(){
+			function scrollto(event, id, padding = {mobile: 0, desktop: 0}) {
+				const buzi = $(window).width() > 768 ? padding.desktop : padding.mobile
+				event.preventDefault();
+        		$("html, body").animate({ scrollTop: $(id).offset().top-buzi }, 500);
+    		}
+
+    		$( "a.portfolio" ).click(function( event ) {
+    			scrollto(event, $(this).attr("href"), {mobile: 10, desktop: 25})
+    		});
+    		$( "a.about" ).click(function( event ) {
+    			scrollto(event, $(this).attr("href"), {mobile: 30, desktop: 300})
+			});	
+			$( "a.contact" ).click(function( event ) {
+    			scrollto(event, $(this).attr("href"), {mobile: 20, desktop: 300})
+    		});
+		});
+
+	</script>
+	
+<style>
+* { 
+	box-sizing: border-box;
+}
+
+body { 
+	background-color: #eff1f3; 
+	margin: 0;
+}
+
+.navbar { 
+	position: fixed; 
+	float: left; 
+	margin: 25px;
+	margin-right: 0px;
+	padding-right: 0px;
+	background-color: #FDFDFD;
+	height: 94.5%;
+}
+
+
+nav a { 
+	text-decoration: none; 
+	color: #bb7e5d
+}
+
+nav ul { 
+	list-style-type: none; 
+	padding: 7em;
+	margin-top: 4em;
+}
+
+
+nav li { 
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	font-size: 20pt; 
+	padding-bottom: 2em;
+	color: #223843;
+	text-align: center;
+
+}
+.buttons {
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	font-size: 12pt; 
+	padding: 5px 15px;
+	color: #fff;
+	background-color: #bb7e5d; ;
+	text-align: center;
+	text-decoration: none; 
+	border-radius: 30px;
+	/*border: solid;*/
+	/*border-color: #bb7e5d;
+	border-radius: 100px;*/
+	
+}
+
+nav li a {
+	padding: 5px 15px;
+}
+
+.centerimg { 
+		margin: 0 auto;
+		display: block;
+}
+main { 
+	float: right;
+	margin-left: 27em;
+}
+
+.masonry-with-columns {
+  	columns: 4 200px;
+  	column-gap: 1rem; 
+  	margin-top: 25px;
+  	margin-right: 25px;
+ }
+.masonry-with-columns img {
+    width: 150px;
+    margin: 0 1rem 1rem 0;
+    display: inline-block;
+    width: 100%; 
+}
+
+.container { 
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+	padding-top: 15em;
+	padding-bottom: 15em;
+}
+
+.image { 
+	padding-right: 10em;
+	padding-left: 10px;
+			
+}
+
+.text { 
+	padding-left: 5em;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	font-size: 15pt; 
+	line-height: 25pt;
+	color: #223843;
+}
+
+#socialmedia { 
+	display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 4em;
+    padding-bottom: 10px;
+}
+
+nav li a:hover {
+	background-color: #bb7e5d;
+	border-radius: 100px;
+	color: #FDFDFD;
+}
+main a.textlink:hover {
+	color: #223843;
+	text-decoration: underline;
+}
+main a.buttons:hover {
+	background-color: #223843;
+	border-radius: 100px;
+	color: #eff1f3;
+}
+
+input:hover[type="submit"] {
+	background-color: #223843;
+	border-radius: 100px;
+	color: #eff1f3;
+}
+
+
+.required:after {
+    content:" *";
+    color: red;
+ }
+ .input { 
+ 	width: 250px; 
+ 	height: 40px;
+ }
+ .textarea { 
+ 	resize: none; 
+ 	width: 515px; 
+ 	height: 200px;
+
+ }
+.formpadding { 
+	padding: 15px; 
+	}	
+.formwidth { 
+	max-width: 550px; 
+	margin-left: 100px;
+	margin-bottom: 200px; }
+
+input[type=submit] {
+    
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	font-size: 12pt; 
+	padding: 5px 15px;
+	color: #fff;
+	background-color: #bb7e5d; ;
+	text-align: center;
+	text-decoration: none; 
+	border: none;
+	border-radius: 30px;
+	
+}
+.textlink {
+	color: #bb7e5d;
+	font-style: italic;
+	text-decoration: none;
+}
+    
+		
+
+
+
+@media only screen and (max-width: 1024px) {
+	nav ul { 
+		padding: 3em ;
+		text-align: center; 
+	}
+	
+	nav li {
+		font-size: 16pt;
+		padding-bottom: 1em;
+	}
+	.navbar { 
+		margin: 25px;
+		height: 100%;
+	} 
+	nav li a:hover {
+	background-color: #fdfdfd;
+	border-radius: 100px;
+	color: #bb7e5d;
+}
+	main a.buttons:hover {
+		background-color: #bb7e5d;
+		border-radius: 100px;
+		color: #eff1f3;
+}
+	input:hover[type="submit"] {
+		background-color: #bb7e5d;
+		border-radius: 100px;
+		color: #eff1f3;
+}
+
+	
+	main {
+		margin-left: 19em;
+	}
+	
+	.centerimg { 
+		margin: 0 auto;
+		display: block;
+		padding: 20px; 
+		width: 250px;
+	}
+
+	nav ul { 
+		margin-top: 0;
+		margin-bottom: 1.5em; 
+	}
+
+	#socialmedia { 
+		border-bottom:  1px solid #223843;
+		width: 180px;
+		padding-bottom: 2em;
+		/*border-bottom: 1px solid #223843;*/
+
+	} 
+
+	.mobilesize { 
+		width: 300px;
+	}
+	.image { 
+		margin: 10px auto;
+		padding: 0;
+		
+	}
+
+	.text { 
+		padding-left: 0;
+		font-size: 13pt; 
+		line-height: 15pt;
+	}
+	.container { 
+		margin: 0 20px 0 5px;
+		flex-flow: column;
+	}
+	h1 { 
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.formwidth { 
+	margin: 0 auto;
+	}
+	.image { 
+	padding-top: 30px; }
+
+
+
+@media only screen and (max-width: 768px) {
+	.masonry-with-columns {
+	  	columns: 3 5px;
+	  	column-gap: 5px; 
+	  	margin-top: 5px;
+	  	width: 100%;
+	  	padding: 20px;
+	}
+
+	.masonry-with-columns img {
+	    width: 150px;
+	    margin: 0 2px 2px 0;
+	    display: inline-block;
+	    width: 100%; 
+	}
+	.container { 
+		margin: 0 20px 0 20px;
+	}
+
+	main {
+		margin-left: 17em;
+	}
+	.navbar {
+		height: 95%;
+	}
+	.formwidth { 
+		
+		margin: 0;
+	}
+	.input { 
+	 	width: 150px; 
+	 	height: 40px;
+ }
+ 	.textarea { 
+	 	resize: none; 
+	 	width: 315px; 
+	 	height: 200px; 
+}
+	.formpadding {
+		margin-left: 75px;
+	}
+	.image { 
+	padding-top: 30px; }
+
+}	
+
+@media only screen and (max-width: 414px) {
+	nav ul { 
+		padding: 0.5em ;
+		text-align: center; 
+	}
+	.navbar { 
+		position: relative;
+		margin: 0;
+		width: 100%; 
+		border-bottom:  1px solid #223843;
+	}  
+	.centerimg { 
+		margin: 0 auto;
+		display: block;
+		padding: 0; 
+	} 
+	#socialmedia { 
+		padding-left: 0;
+		margin: 0 auto;
+		border-bottom: none;
+		
+	} 
+	
+	nav ul { 
+		margin-top: 0;
+		margin-bottom: 1.5em; 
+	}
+	nav li { 
+		padding-bottom: 1em; 
+	}
+	
+	
+	main { 
+		margin: 0; 
+		float: none;
+	}
+	
+	.mobilesize { 
+		width: 200px;
+	}
+	.image { 
+		padding-right: 10px;
+		float: right; 
+	}
+
+	.text { 
+		padding-left: 0;
+		font-size: 10pt; 
+		line-height: 15pt;
+	}
+	.container { 
+		padding-left: 10px;
+		padding-top: 50px;
+	}
+	h1 { 
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.masonry-with-columns {
+	  	columns: 2 5px;
+	  	column-gap: 5px; 
+	  	margin-top: 5px;
+	  	margin-right: 5px;
+	  	width: 100%;
+	  	
+ 	}
+ 	.formpadding {
+		margin-left: 35px;
+	}
+	.image { 
+	padding-top: 30px; }
+ 	
+	
+}
+@media only screen and (max-width: 375px) {
+	.formpadding {
+		margin-left: 15px;
+	}
+	.image { 
+	padding-top: 30px; }
+}
+}
+</style>
+	
+</head>
+
+<body>
+	
+	
+	<div class="navbar">
+		<nav>
+			
+			<img class="centerimg" src="nav/logo.svg" height="200" width="300" alt="Mara Design Logo">
+			
+			<ul>
+				<li><a href="#Portfolio" class="portfolio">Portfolio</a></li> 
+				<li><a href="#About" class="about">About</a></li> 
+				<li><a href="#Contact" class="contact">Contact</a></li> 
+			</ul>
+			
+			<div id="socialmedia">
+				<a target="_blank" href="https://www.behance.net/mariabanlaki?fbclid=IwAR0d3SDtv_SFe6OKC4sosOUH5tVziU1iIZr1ufhe-akusPAs1RbRRxfclpo"><img src="nav/behance.svg" height="25" width="25" alt="Behance Logo"></a>
+				<a target="_blank" href="https://www.instagram.com/mara_pencil/"><img src="nav/instagram.svg" height="25" width="25" alt="Instagram Logo"></a> 
+				<a target="_blank" href="https://www.linkedin.com/in/maria-banlaki-978a92158/?originalSubdomain=be"><img src="nav/linkedin.svg" height="25" width="25" alt="LinkedIn Logo"></a> 
+				<a target="_blank" href="https://twitter.com/mariabanlaki"><img src="nav/twitter.svg" height="25" width="25" alt="Twitter Logo"></a>
+			</div>
+			
+		</nav>
+	</div>
+	
+	<main>
+			
+		<div class="masonry-with-columns" id="Portfolio">
+			
+			<img class="resize" src="portfolio/01.jpg" style="100%" alt="Photo1">
+			<img class="resize" src="portfolio/02.jpg" style="100%" alt="Photo2">
+			<img class="resize" src="portfolio/08.jpg" style="100%" alt="Photo3">
+			<img src="portfolio/05.jpg" style="100%" alt="Photo4">
+			<img src="portfolio/04.jpg" style="100%" alt="Photo5">
+			<img src="portfolio/06.jpg" style="100%" alt="Photo6">
+			<img src="portfolio/03.jpg" style="100%" alt="Photo7">
+			<img src="portfolio/07.jpg" style="100%" alt="Photo8">
+			<img src="portfolio/09.png" style="100%" alt="Photo9">
+			<img src="portfolio/10.png" style="100%" alt="Photo10">
+			<img src="portfolio/11.png" style="100%" alt="Photo11">
+			<img src="portfolio/12.png" style="100%" alt="Photo12">
+			<img src="portfolio/13.png" style="100%" alt="Photo13">
+			<img src="portfolio/14.jpg" style="100%" alt="Photo14">
+			<img src="portfolio/15.jpg" style="100%" alt="Photo15">
+			
+		</div>
+			
+		
+		<div class="container">
+			<div class="text">
+				<h1 style="color: #223843" id="About">Hi there,</h1>
+				<p style="color: #223843">I am a freelance Graphic Designer. I work on multiple projects at 
+				the same time with a special focus on social media 2D animations 
+				and online branding. Recently I started to learn digital drawing. 
+				I am eager to learn as much as possible and my ultimate goal is 
+				to become an outstanding motion designer. I was a professional 
+				volleyball player in Hungary before I joined the team at <a class="textlink" target="_blank" href="https://znconsulting.com/?fbclid=IwAR2xwZX8N89DITj6x7wox2dvEhD0E1RGcnHJK0UfIoWzIJJOu67JQ0fe67Q">ZN Consulting</a> 
+				and I still enjoy teaching and playing volleyball outside work. I studied 
+				web and graphic design in Budapest, Hungary. I love the beach and 
+				doing sports in my free time.</p>
+				<a class="buttons" href="mailto:maria.banlaki@gmail.com">EMAIL ME</a>
+		</div>
+		<div class="image">
+				<img class="mobilesize" src="about/Image.jpg" alt="Picture of me">
+			</div>
+		</div>
+
+		<div class="formwidth" id="Contact">
+			<h1 style="text-align: center; color: #223843; font-family: Century Gothic; 
+						font-size: 22pt;">Let's get in touch</h1>
+				
+					
+					<form name="ContactForm" method="post" id="ContactForm" action="https://webdevbasics.net/scripts/demo.php">
+						<div class="formpadding" style=" float: left;">
+							<label class="required"></label><br>
+							<input class="input" type="text" name="yname" id="yname" placeholder="Your Name" required><br>
+						</div>
+
+						<div class="formpadding">
+							<label class="required"></label><br>
+							<input class="input" type="email" name="yemail" id="yemail" placeholder="Your Email" required><br>
+						</div>
+
+						<div class="formpadding">
+							<label class="required"></label><br> 
+							<textarea class="textarea" name="message" id="message" rows="4" cols="40" placeholder="Your Message" required></textarea>
+						</div>
+
+						<div class="formpadding">
+							<input type="submit" value="SEND YOUR MESSAGE">
+						</div>
+					</form>
+		</div>
+					
+				
+
+
+
+	</main>
+	
+	<footer>
+		
+	</footer>
+
+</body>
+
+</html>
